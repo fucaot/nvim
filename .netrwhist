@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
-let g:netrw_dirhist_4='/Users/wangjiawei/Develop/CodeSpace/C_C++/CppPrimer/4.7条件运算符'
-let g:netrw_dirhist_3='/Users/wangjiawei/.vim'
-let g:netrw_dirhist_2='/Users/wangjiawei/.config/nvim'
-let g:netrw_dirhist_1='/Users/wangjiawei/.config/nvim/init.vim'
