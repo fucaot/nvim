@@ -4,6 +4,8 @@ set autoindent
 set shiftwidth=4
 set tabstop=4
  
+" 设置复制到剪切板
+set clipboard=unnamed
 
 " 设置开启高亮
 " syntax on
