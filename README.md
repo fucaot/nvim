@@ -18,7 +18,7 @@ clone https://github.com/RastW/nvim.git
 mv nvim ~.config/nvim/
 ```
 
-enter vim, and then execute vim command:
+Enter vim and then execute command in vim :
 ```
 :source ~/.config/nvim/init.vim
 :Plugin Install
