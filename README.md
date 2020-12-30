@@ -1,5 +1,6 @@
 # nvim
 my nvim Config
+![my vim config](https://github.com/RastW/nvim/image/myVimConfig.png)
 
 #### quick start
 
