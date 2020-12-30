@@ -262,3 +262,44 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
+
+"-------------------------- stattify -------------------------------
+
+let g:startify_bookmarks = [ {'v': '~/.vimrc'}, {'z': '~/.zshrc'} ]
+
+let g:startify_commands = [
+    \ {'o': ['Find files', 'Files']},
+    \ {'a': ['global search', 'Ag']},
+    \ ]
+
+
+" function s:foobar()
+"     return [
+"       \ { 'line': 'Find files', 'cmd': 'Files' },
+"       \ { 'line': 'global search', 'cmd': 'Ag' },
+"       \ ]
+" endfunction
+
+" \ { 'type': function('s:foobar'), 'header': ['define'] },
+
+let g:startify_lists = [
+    \ { 'type': 'files', 'header': ['MRU:'] },
+	\ { 'type': 'bookmarks', 'header': ['Bookmarks']      },
+    \ { 'type': 'commands', 'header': ['Commands'] },
+    \ ]
+
+
+
+" set startify header
+ let g:startify_custom_header = [
+         \ '                                 ________  __ __        ',
+         \ '            __                  /\_____  \/\ \\ \       ',
+         \ '    __  __ /\_\    ___ ___      \/___//''/''\ \ \\ \    ',
+         \ '   /\ \/\ \\/\ \ /'' __` __`\        /'' /''  \ \ \\ \_ ',
+         \ '   \ \ \_/ |\ \ \/\ \/\ \/\ \      /'' /''__  \ \__ ,__\',
+         \ '    \ \___/  \ \_\ \_\ \_\ \_\    /\_/ /\_\  \/_/\_\_/  ',
+         \ '     \/__/    \/_/\/_/\/_/\/_/    \//  \/_/     \/_/    ',
+         \ ]
+
