@@ -11,6 +11,7 @@ my nvim Config
 [neovim] (https://github.com/junegunn/vim-plug)
 
 - installation config
+
 '''
 clone https://github.com/RastW/nvim.git
 
