@@ -12,11 +12,11 @@ my nvim Config
 
 - installation config
 
-'''
+```
 clone https://github.com/RastW/nvim.git
 
 mv nvim ~.config/nvim/
-'''
+```
 
 enter vim, and then execute vim command:
 ```
