@@ -4,6 +4,10 @@ set autoindent
 set shiftwidth=4
 set tabstop=4
  
+set colorcolumn=81
+
+" 光标
+
 " 设置复制到剪切板
 set clipboard=unnamed
 
@@ -53,6 +57,9 @@ Plug 'w0ng/vim-hybrid'
 " Plug yuttie/inkstained-vim 主题
 Plug 'yuttie/inkstained-vim'
 
+" forest-Night 主题
+Plug 'sainnhe/forest-night'
+
 " nerdtree 目录树
 Plug 'preservim/nerdtree'
 
@@ -75,12 +82,17 @@ call plug#end()
 " 设置主题
 " inkstained-vim主题
 syntax enable
-set background=light
+" set background=light
 " colorscheme inkstained
 
 " hybrid主题
-set background=dark
-colorscheme hybrid
+" set background=dark
+" colorscheme hybrid
+
+" Forest Night主题
+let g:forest_night_enable_italic = 1
+let g:forest_night_transparent_background = 1
+silent! colorscheme forest-night
 
 " ,g打开nerdtree
 " ,v打开当前目录
@@ -290,16 +302,4 @@ let g:startify_lists = [
     \ { 'type': 'commands', 'header': ['Commands'] },
     \ ]
 
-
-
-" set startify header
- let g:startify_custom_header = [
-         \ '                                 ________  __ __        ',
-         \ '            __                  /\_____  \/\ \\ \       ',
-         \ '    __  __ /\_\    ___ ___      \/___//''/''\ \ \\ \    ',
-         \ '   /\ \/\ \\/\ \ /'' __` __`\        /'' /''  \ \ \\ \_ ',
-         \ '   \ \ \_/ |\ \ \/\ \/\ \/\ \      /'' /''__  \ \__ ,__\',
-         \ '    \ \___/  \ \_\ \_\ \_\ \_\    /\_/ /\_\  \/_/\_\_/  ',
-         \ '     \/__/    \/_/\/_/\/_/\/_/    \//  \/_/     \/_/    ',
-         \ ]
 
