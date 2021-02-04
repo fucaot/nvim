@@ -130,6 +130,9 @@ nnoremap <leader>h ^
 nnoremap <silent> <leader>o :Files<cr>
 nnoremap <silent> <leader>ag :Ag<cr>
 
+" ,s 打开startify开屏k
+nnoremap <silent> <leader>s :Startify<cr>
+
 " ------------------ conquer of completion ---------------------
 
 " TextEdit might fail if hidden is not set.
@@ -340,6 +343,7 @@ let g:startify_commands = [
 " endfunction
 
 " \ { 'type': function('s:foobar'), 'header': ['define'] },
+
 
 let g:startify_lists = [
 			\ { 'type': 'files', 'header': ['MRU:'] },
