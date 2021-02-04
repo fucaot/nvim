@@ -6,7 +6,9 @@ set tabstop=4
 
 set colorcolumn=81
 
-" 光标
+
+" 光标所在行高亮
+set cursorline
 
 " 设置复制到剪切板
 set clipboard=unnamed
@@ -52,13 +54,19 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 
 " w0ng/vim-hybrid vim主题
-Plug 'w0ng/vim-hybrid'
+" Plug 'w0ng/vim-hybrid'
 
 " Plug yuttie/inkstained-vim 主题
-Plug 'yuttie/inkstained-vim'
+" Plug 'yuttie/inkstained-vim'
 
 " forest-Night 主题
-Plug 'sainnhe/forest-night'
+" Plug 'sainnhe/forest-night'
+
+" sickill/vim-monokai主题
+" Plug 'sickill/vim-monokai'
+
+" hardcoreplayers/oceanic-material主题
+Plug 'hardcoreplayers/oceanic-material'
 
 " nerdtree 目录树
 Plug 'preservim/nerdtree'
@@ -69,19 +77,26 @@ Plug 'jiangmiao/auto-pairs'
 " 状态栏插件
 Plug 'vim-airline/vim-airline'
 
-" Use release branch (recommend)
+" Use release branch (recommend) coc.nvim补全
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " fzf.vim搜索插件
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" 快速打开历史文件
+Plug 'jlanzarotta/bufexplorer'
+
+" help you read complex code by showing diff level of parentheses in diff
+" color !!（当前行高亮
+Plug 'luochen1990/rainbow'
+
 " Initialize plugin system
 call plug#end()
 
 " 设置主题
 " inkstained-vim主题
-syntax enable
+" syntax enable
 " set background=light
 " colorscheme inkstained
 
@@ -90,9 +105,17 @@ syntax enable
 " colorscheme hybrid
 
 " Forest Night主题
-let g:forest_night_enable_italic = 1
-let g:forest_night_transparent_background = 1
-silent! colorscheme forest-night
+" let g:forest_night_enable_italic = 1
+" let g:forest_night_transparent_background = 1
+" silent! colorscheme forest-night
+
+" sickill/vim-monokai主题
+" syntax enable
+" colorscheme monokai
+
+" Oceanic Material主题
+set background=dark
+colorscheme oceanic_material
 
 " ,g打开nerdtree
 " ,v打开当前目录
@@ -276,16 +299,38 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 
+"-------------------------- rainbow -------------------------------
+	let g:rainbow_conf = {
+	\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+	\	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+	\	'operators': '_,_',
+	\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+	\	'separately': {
+	\		'*': {},
+	\		'tex': {
+	\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+	\		},
+	\		'lisp': {
+	\			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+	\		},
+	\		'vim': {
+	\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+	\		},
+	\		'html': {
+	\			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+	\		},
+	\		'css': 0,
+	\	}
+	\}
 
 "-------------------------- stattify -------------------------------
 
-let g:startify_bookmarks = [ {'v': '~/.vimrc'}, {'z': '~/.zshrc'} ]
+let  g:startify_bookmarks = [ {'v': '~/.vimrc'}, {'z': '~/.zshrc'} ]
 
 let g:startify_commands = [
 			\ {'o': ['Find files', 'Files']},
 			\ {'a': ['global search', 'Ag']},
 			\ ]
-
 
 " function s:foobar()
 "     return [
@@ -298,8 +343,9 @@ let g:startify_commands = [
 
 let g:startify_lists = [
 			\ { 'type': 'files', 'header': ['MRU:'] },
-			\ { 'type': 'bookmarks', 'header': ['Bookmarks']      },
+            \ { 'type': 'sessions',  'header': ['   Sessions']},
+			\ { 'type': 'bookmarks', 'header': ['Bookmarks'] },
 			\ { 'type': 'commands', 'header': ['Commands'] },
 			\ ]
 
-
+"           \ { 'type': 'dir', 'header': ['MRU '. getcwd()] },
