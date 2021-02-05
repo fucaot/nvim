@@ -66,7 +66,10 @@ Plug 'mhinz/vim-startify'
 " Plug 'sickill/vim-monokai'
 
 " hardcoreplayers/oceanic-material主题
-Plug 'hardcoreplayers/oceanic-material'
+" Plug 'hardcoreplayers/oceanic-material'
+
+" dues主题
+Plug 'ajmwagar/vim-deus'
 
 " nerdtree 目录树
 Plug 'preservim/nerdtree'
@@ -114,8 +117,21 @@ call plug#end()
 " colorscheme monokai
 
 " Oceanic Material主题
-set background=dark
-colorscheme oceanic_material
+" set background=dark
+" colorscheme oceanic_material
+
+" vim-deus主题
+" set t_Co=256
+set termguicolors
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+" Setting dark mode
+set background=dark    
+colorscheme deus
+let g:deus_termcolors=256 
+
 
 " ,g打开nerdtree
 " ,v打开当前目录
@@ -353,3 +369,7 @@ let g:startify_lists = [
 			\ ]
 
 "           \ { 'type': 'dir', 'header': ['MRU '. getcwd()] },
+
+
+
+" 1
