@@ -37,6 +37,7 @@ func! CompileRunGcc()
 	elseif &filetype == 'go'
 		set splitbelow
 		:sp
-		:term go run .
+		" :term go run .
+		:term go run %
 	endif
 endfunc

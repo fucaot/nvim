@@ -77,8 +77,14 @@ Plug 'preservim/nerdtree'
 " 成对插入
 Plug 'jiangmiao/auto-pairs' 
 
-" 状态栏插件
-Plug 'vim-airline/vim-airline'
+" 状态栏插件 airline
+" Plug 'vim-airline/vim-airline'
+
+" 状态栏插件 GalaxyLine
+" This is a SUPER FAST statusline,  and the ico pulgin of lua
+Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+Plug 'ryanoasis/vim-devicons' " vimscript
+" Plug 'kyazdani42/nvim-web-devicons' 
 
 " Use release branch (recommend) coc.nvim补全
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -94,6 +100,8 @@ Plug 'jlanzarotta/bufexplorer'
 " color !!（当前行高亮
 Plug 'luochen1990/rainbow'
 
+" vim-go插件
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } 
 " Initialize plugin system
 call plug#end()
 
@@ -141,6 +149,9 @@ nnoremap <leader>v :NERDTreeFind<cr>
 " ,h ,l 移动光标到行首行尾
 nnoremap <leader>l $
 nnoremap <leader>h ^
+
+vnoremap <leader>l $
+vnoremap <leader>h ^
 
 " ,o ,a 模糊查询文件、模糊查询文件内容
 nnoremap <silent> <leader>o :Files<cr>
