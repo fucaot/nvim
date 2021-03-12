@@ -6,6 +6,8 @@ set tabstop=4
 
 set colorcolumn=81
 
+" UTF-8
+set encoding=UTF-8
 
 " 光标所在行高亮
 set cursorline
@@ -46,8 +48,6 @@ inoremap <C-d> <Esc>dd
 
 " vim-plus 插件
 " Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
 " vim-startify 开屏插件安装
@@ -68,6 +68,12 @@ Plug 'mhinz/vim-startify'
 " hardcoreplayers/oceanic-material主题
 " Plug 'hardcoreplayers/oceanic-material'
 
+" spaceline 状态栏插件
+Plug 'hardcoreplayers/spaceline.vim'
+
+" spaceline required plug
+Plug 'ryanoasis/vim-devicons'
+
 " dues主题
 Plug 'ajmwagar/vim-deus'
 
@@ -76,15 +82,6 @@ Plug 'preservim/nerdtree'
 
 " 成对插入
 Plug 'jiangmiao/auto-pairs' 
-
-" 状态栏插件 airline
-" Plug 'vim-airline/vim-airline'
-
-" 状态栏插件 GalaxyLine
-" This is a SUPER FAST statusline,  and the ico pulgin of lua
-Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
-Plug 'ryanoasis/vim-devicons' " vimscript
-" Plug 'kyazdani42/nvim-web-devicons' 
 
 " Use release branch (recommend) coc.nvim补全
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
