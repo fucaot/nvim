@@ -22,8 +22,8 @@ Plug 'mhinz/vim-startify'
 " spaceline 状态栏插件
 Plug 'hardcoreplayers/spaceline.vim'
 
-" spaceline required plug
-Plug 'ryanoasis/vim-devicons'
+" Vim-Gitbttur 左侧Git状态插件
+Plug 'airblade/vim-gitgutter'
 
 " dues主题
 Plug 'ajmwagar/vim-deus'
@@ -50,6 +50,9 @@ Plug 'luochen1990/rainbow'
 
 " vim-go插件
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } 
+
+" spaceline required plug PS: Always load the vim-devicons as the very last one.
+Plug 'ryanoasis/vim-devicons'
 " Initialize plugin system
 call plug#end()
 
