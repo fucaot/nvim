@@ -56,3 +56,5 @@ nnoremap <silent> <leader>ag :Ag<cr>
 
 " ,s 打开startify开屏k
 nnoremap <silent> <leader>s :Startify<cr>
+
+" 设置字体大小
