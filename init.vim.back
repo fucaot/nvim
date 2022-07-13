@@ -1,0 +1,35 @@
+" 基础设置-----------------------------------
+set number
+
+set autoindent
+set shiftwidth=4
+set tabstop=4
+
+" 设置复制到剪切板
+set clipboard=unnamed
+
+" 设置高亮搜索
+set hlsearch
+
+" lua 插件包管理器设置------------------------
+
+" 基础设置
+lua require('basic')
+" Packer插件管理
+lua require('plugins')
+" 快捷键映射
+lua require('keybindings')
+
+" 插件配置
+"
+lua require('plugin-config/nvim-tree')
+lua require('plugin-config/bufferline')
+
+" lsp
+" server
+lua require('lsp/nvim-lsp-installer')
+lua require('lsp/nvim-cmp')
+lua require('lsp/lspsaga')
+" 主题美化------------------------------------
+set background=dark
+colorscheme gruvbox
