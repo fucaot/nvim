@@ -1,0 +1,79 @@
+{
+    "snippets.ultisnips.pythonPrompt": false,
+    "coc.preferences.extensionUpdateCheck": "daily", // 插件检查更新，每天
+    "suggest.noselect": false,
+    "suggest.enablePreselect": true, // 补全默认选择第一个
+    "suggest.completionItemKindLabels": // 图标
+    {
+        "class": "\uf0e8",
+        "color": "\ue22b",
+        "constant": "\uf8fe",
+        "default": "\uf29c",
+        "enum": "\uf435",
+        "enumMember": "\uf02b",
+        "event": "\ufacd",
+        "field": "\uf93d",
+        "file": "\uf723",
+        "folder": "\uf115",
+        "function": "\u0192",
+        "interface": "\uf417",
+        "keyword": "\uf1de",
+        "method": "\uf6a6",
+        "module": "\uf40d",
+        "operator": "\uf915",
+        "property": "\ue624",
+        "reference": "\ufa46",
+        "snippet": "\ue60b",
+        "struct": "\ufb44",
+        "text": "\ue612",
+        "typeParameter": "\uf728",
+        "unit": "\uf475",
+        "value": "\uf89f",
+        "variable": "\ue71b"
+    },
+    "languageserver": {
+        "sql": {
+            "module": "/path/to/node_modules/sql-language-server/dist/bin/cli.js",
+            "args": [
+                "up",
+                "--method",
+                "node-ipc"
+            ],
+            "filetypes": [
+                "sql",
+                "mysql"
+            ]
+        }
+    }
+}
+// "languageserver": {
+//     // lua
+//     // "lua": {
+//     //     "command": "lua-lsp",
+//     //     "filetypes": ["lua"]
+//     // },
+//     // go
+//     "golang": {
+//         "command": "gopls",
+//         "rootPatterns": ["go.mod"],
+//         "filetypes": ["go"]
+//     },
+//     // C C++ Object-C
+//     "clangd": {
+//         "command": "clangd",
+//         "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+//         "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+//     },
+//     // rust
+//     "rust": {
+//         "command": "rust-analyzer",
+//         "filetypes": ["rust"],
+//         "rootPatterns": ["Cargo.toml"]
+//     },
+//     // sql
+//     "sql": {
+//         "module": "/path/to/node_modules/sql-language-server/dist/bin/cli.js",
+//         "args": ["up", "--method", "node-ipc"],
+//         "filetypes": ["sql", "mysql"]
+//     }
+// }

@@ -1,8 +1,19 @@
 local status, nvim_tree = pcall(require, "nvim-tree")
 
+if not status then
+        vim.notify("没有找到nvim-tree")
+    return
+end
+
+-- 上述代码等于：
+-- local nvim_tree = require'nvim-tree'
+-- 若直接require，则插件不存在的情况下会崩溃，需要用过pcall捕获异常处理
+
 -- 获取快捷键Map
--- local list_keys = require('keybindings').nvimTreeList
-require("nvim-tree").setup({
+local list_keys = require('keybindings').nvimTreeList
+
+nvim_tree.setup(
+    {
         -- 显示git状态图标
         git = {
         	enable = true
@@ -63,7 +74,8 @@ require("nvim-tree").setup({
             enable = true,
             update_cwd = true,
         },
-})
+    }
+)
 
 --
 -- 自动关闭

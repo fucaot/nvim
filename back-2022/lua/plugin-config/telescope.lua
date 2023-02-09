@@ -11,7 +11,7 @@ telescope.setup(
             initial_mode = "insert",
 
             -- 窗口内快捷键
-            -- mappings = require("keybindings").telescopeList,
+            mappings = require("keybindings").telescopeList,
         },
 
         pickers = {
@@ -23,4 +23,3 @@ telescope.setup(
         extensions = {},
     }
 )
-

@@ -10,6 +10,7 @@ local servers = {
     gopls = require "lsp.config.go",
     sqls = require "lsp.config.sql",
     jdtls = require "lsp.config.java",
+    clangd = require "lsp.config.cpp",
 }
 
 -- 自动安装 Language Servers
