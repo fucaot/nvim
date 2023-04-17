@@ -59,6 +59,14 @@ curl -sL install-node.vercel.app/lts | bash
         5.1 `CocInstall coc-git`
 
 
+### 选择配置
+
+若需要进行python相关工作，建议执行以下流程：
+
+1. `pip3 install jedi`
+
+2. 打开nvim，执行`CocInstall coc-jedi`, 然后执行`:CocCommand python.setInterpreter`, 来进行选择python;
+
 ## 快捷键
 
 ### 左侧文件树（nvim-tree）
