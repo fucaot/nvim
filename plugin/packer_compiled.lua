@@ -107,6 +107,11 @@ _G.packer_plugins = {
     path = "/Users/wangjiawei/.local/share/nvim/site/pack/packer/start/lush.nvim",
     url = "https://github.com/rktjmp/lush.nvim"
   },
+  ["nord.nvim"] = {
+    loaded = true,
+    path = "/Users/wangjiawei/.local/share/nvim/site/pack/packer/start/nord.nvim",
+    url = "https://github.com/shaunsingh/nord.nvim"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/wangjiawei/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",

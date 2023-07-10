@@ -1,4 +1,4 @@
-local colorscheme = "gruvbox"
+local colorscheme = "nord"
 -- gruvbox
 -- zephyr (存在Treesitter配色冲突)
 -- nord
